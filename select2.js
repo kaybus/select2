@@ -3068,7 +3068,7 @@ the specific language governing permissions and limitations under the Apache Lic
 
             //remove user mention/tag from comment box when X is clicked from select 2 component
             var commentInput = Ember.$('#commentInput');
-            if(commentInput){
+            if(commentInput.val()){
                 var userToDeleteWithAt = '@[' + data.text + ']';
                 var userToDeleteNoAt = '[' + data.text + ']';
                 commentInput.val(commentInput.val().replace(userToDeleteWithAt,''));
